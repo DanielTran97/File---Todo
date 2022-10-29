@@ -15,7 +15,7 @@ jobs:
 
     # list of steps to perform task
     steps:
-    -name: Echo the branch name
+    - name: Echo the branch name
       run: echo "Current branch - ${{ github.ref_name }}"
     - name: Checkout the current repo
       uses: actions/checkout@v3
