@@ -4,7 +4,7 @@ name: My First Workflow TODO
 on:
   push:
     branches:
-    - "release/*"
+    - "release/.+"
 
 # Jobs in the workflow
 jobs:
@@ -15,6 +15,9 @@ jobs:
 
     # list of steps to perform task
     steps:
+    -name: Echo the branch name
+      run: echo "current branch - ${{ github.ref_name }}"
     - name: Checkout the current repo
       uses: actions/checkout@v3
-    
+      with:
+        ref: ${{ github.ref_name }}
