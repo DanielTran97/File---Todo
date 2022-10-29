@@ -4,7 +4,7 @@ name: My First Workflow TODO
 on:
   push:
     branches:
-    - "release/.+"
+    - "release/*"
 
 # Jobs in the workflow
 jobs:
