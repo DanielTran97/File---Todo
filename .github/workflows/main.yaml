@@ -3,6 +3,7 @@ name: My First Workflow TODO
 # trigger
 on:
   push:
+  branches:
   - 'release/*'
 
 # Jobs in the workflow
